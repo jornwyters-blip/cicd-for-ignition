@@ -14,7 +14,7 @@ The repo tracks only the **project files**; the gateway generates its own config
 into a Docker volume we never commit. How those project files are structured, and how to
 deploy them, is [Lab 04](../04-ignition-file-based-deploy/).
 
-## Slides
+## Slides 
 
 The decks open in your browser; click **Open document** on the first page.
 
