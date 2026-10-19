@@ -1,0 +1,32 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 36,
+          "width": 70
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#FFEA8E"
+          },
+          "text": "Jorn",
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
