@@ -21,7 +21,7 @@
 services:
   ignition:
     image: inductiveautomation/ignition:8.3.8
-    container_name: lab03-ignition   
+    container_name: lab03-ignition
     # Run as YOUR uid with gid 0. The image is built for any uid in group 0
     # (everything under ignition/ is owned 2003:0 mode 775), and this is the
     # gateway that reads and writes your working tree: as you, it can write
