@@ -1,0 +1,39 @@
+name: Lab 03 · CI
+
+# Monorepo scoping: only changes to this lab (or this workflow) trigger it.
+# TODO (step 1): narrow `paths:` so docs-only PRs are skipped, plus a
+# `push: branches: [main]` backstop. See the assignment.
+on:
+  pull_request:
+    paths:
+      - "labs/03-github-actions/**"
+      - ".github/workflows/lab03-*.yml"
+
+# Least-privilege default; individual jobs override if they need more.
+permissions:
+  contents: read
+
+# Every `run:` step starts in the lab folder, as if you'd cd'd there yourself.
+defaults:
+  run:
+    working-directory: labs/03-github-actions
+
+jobs:
+  # Job ids become the status-check names branch protection matches on:
+  # keep `lint` and `validate` stable (renaming them orphans the required checks).
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # TODO (step 0): set up Python 3.12, then install the pinned tools
+      #                (pip install yamllint==1.35.1 ign-lint==0.6.1)
+      # TODO (step 0): run each linter: yamllint, actionlint, shellcheck, ign-lint
+      #                (ign-lint from the repo root, as in Part 1)
+      # TODO (step 2): add `docker compose config -q` as the final lint step
+
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # TODO (step 0): run scripts/validate.sh
