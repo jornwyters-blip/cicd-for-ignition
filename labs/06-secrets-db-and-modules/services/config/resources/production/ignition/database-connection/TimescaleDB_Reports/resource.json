@@ -1,0 +1,19 @@
+{
+  "scope": "A",
+  "description": "Read-only reporting connection (reporting user)",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "config.json"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-10-20T12:01:03Z"
+    },
+    "uuid": "df99bf78-6e75-40c9-a187-c89cecddc120",
+    "lastModificationSignature": "3eaebcf60bc2d4b5e246ef9628e90ccd7cf3946a661c67c26d0caaf77f1b816e",
+    "enabled": true
+  }
+}
