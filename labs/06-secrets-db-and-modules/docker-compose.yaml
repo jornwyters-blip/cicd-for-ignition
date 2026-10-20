@@ -369,6 +369,3 @@ volumes:
   gateway-test-data:
   gateway-production-data:
   timescaledb-data:
-
-
-
