@@ -10,10 +10,10 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2026-10-20T11:43:48Z"
+      "timestamp": "2026-10-20T12:27:50Z"
     },
     "uuid": "6baaa33a-5327-4ab6-8378-2c9a8ef678fe",
-    "lastModificationSignature": "ba3b1e745927520d8551a53a268c5e3c1d1d658afbc2f79423ff9f016a04602d",
+    "lastModificationSignature": "0b084dd0e5fec09ca5114344c42f83d01a88f54b336a2afac7e0c5f6d5111f5a",
     "enabled": true
   }
 }
