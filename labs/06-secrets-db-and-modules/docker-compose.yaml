@@ -123,6 +123,12 @@ x-ignition-healthcheck: &ignition-healthcheck
   retries: 10
   start_period: 90s
 
+secrets:
+  postgres_password:
+    file: ./secrets/postgres_password.txt
+  reporting_password:
+    file: ./secrets/reporting_password.txt
+
 services:
   # --- local gateway: edits on the host show up here immediately --------------
   gateway-local-development:
@@ -150,6 +156,7 @@ services:
       - ./services/config:/usr/local/bin/ignition/data/config
       - ./services/modules.json:/usr/local/bin/ignition/data/modules.json
       - ./third-party-modules:/third-party-modules
+    secrets: [postgres_password, reporting_password]
     environment:
       <<: *ignition-env
       GATEWAY_ADMIN_USERNAME: "${GATEWAY_ADMIN_USERNAME_LOCAL:-admin}"
@@ -308,9 +315,10 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
+    secrets: [postgres_password, reporting_password]
     environment:
-      POSTGRES_USER: "${POSTGRES_USER:-ignition}"
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-lab06-postgres-pw}"
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      REPORTING_PASSWORD_FILE: /run/secrets/reporting_password
       POSTGRES_DB: ignition_local_development
       REPORTING_PASSWORD: "${REPORTING_PASSWORD:-lab06-reporting-pw}"
     healthcheck:
@@ -361,3 +369,6 @@ volumes:
   gateway-test-data:
   gateway-production-data:
   timescaledb-data:
+
+
+
