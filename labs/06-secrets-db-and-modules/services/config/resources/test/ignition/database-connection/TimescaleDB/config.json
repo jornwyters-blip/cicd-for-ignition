@@ -10,6 +10,13 @@
   "failoverMode": "STANDARD",
   "failoverProfile": "",
   "includeSchemaInTableName": false,
+  "password": {
+    "data": {
+      "providerName": "LabSecrets",
+      "secretName": "POSTGRES_PASSWORD"
+    },
+    "type": "Referenced"
+  },
   "poolInitSize": 0,
   "poolMaxActive": 8,
   "poolMaxIdle": 8,
